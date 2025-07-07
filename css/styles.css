@@ -45,6 +45,10 @@ body section {
     font-size: var(--font-size-small);
 }
 
+.header nav a:hover {
+    text-decoration: underline;
+}
+
 .about {
     color: var(--body-font-color);
 }
@@ -69,6 +73,7 @@ body section {
 
 .projects-container {
     display: flex;
+    gap: 20px;
 }
 
 .project h3 {
@@ -102,19 +107,14 @@ body section {
     font-size: var(--font-size-small);
 }
 
-@media(max-width: 600px) {
+@media(max-width: 850px) {
     body section {
         margin: 10px 25px;
         padding: 5px 5px;
     }
 
-    section h2 {
-        margin-top: 0px
-    }
-
     .about-container {
         flex-direction: column;
-        padding-right: 50px;
         width: 100%
     }
 
@@ -125,9 +125,20 @@ body section {
     .about-right {
         width: 100%;
     }
+}
 
+@media(max-width:720px) {
     .projects-container {
-
         flex-direction: column;
+    }
+}
+
+@media(max-width: 600px) {
+    body {
+        padding-top: 90px;
+    }
+
+    section h2 {
+        margin-top: 0px
     }
 }
