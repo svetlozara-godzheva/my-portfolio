@@ -14,6 +14,11 @@ body {
     font-family: var(--font-family);
 }
 
+body section {
+    margin: 20px 50px;
+    padding: 15px 15px;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -41,9 +46,7 @@ body {
 }
 
 .about {
-    margin: 20px 50px;
     color: var(--body-font-color);
-    padding: 15px 15px;
 }
 
 .about-header {
@@ -58,11 +61,6 @@ body {
 .about-right p {
     margin-top: 0px;
     font-size: var(--font-size-small);
-}
-
-.projects {
-    margin: 20px 50px;
-    padding: 15px 15px;
 }
 
 .projects-header {
@@ -80,11 +78,6 @@ body {
 .project p {
     font-size: var(--font-size-small);
     margin: 10px 0px;
-}
-
-.contact {
-    margin: 20px 50px;
-    padding: 15px 15px;
 }
 
 .contact-header {
@@ -107,4 +100,34 @@ body {
     text-align: center;
     line-height: 0px;
     font-size: var(--font-size-small);
+}
+
+@media(max-width: 600px) {
+    body section {
+        margin: 10px 25px;
+        padding: 5px 5px;
+    }
+
+    section h2 {
+        margin-top: 0px
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding-right: 50px;
+        width: 100%
+    }
+
+    .about-left img {
+        width: 100%;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .projects-container {
+
+        flex-direction: column;
+    }
 }
