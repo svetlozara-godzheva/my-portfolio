@@ -85,6 +85,10 @@ body section {
     margin: 10px 0px;
 }
 
+.project-details.hidden {
+    display: none;
+}
+
 .contact-header {
     width: 100%;
 }
