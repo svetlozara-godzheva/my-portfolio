@@ -90,14 +90,22 @@
                 <h2>Contact Me</h2>
             </div>
             <div class="contact-container">
-                <p>Mauris iaculis, lorem ut suscipit gravida, nunc sapien congue arcu, sit amet porta eros ligula at
-                    nibh. Cras tempor sagittis ipsum, a tempor metus rutrum vel. Duis ut interdum nunc, venenatis
-                    viverra ante. Nullam ac gravida lectus. Vestibulum placerat nisl et lectus hendrerit mollis.
-                    Curabitur sed egestas turpis, vel bibendum nulla. Curabitur vel mi tincidunt, congue arcu efficitur,
-                    malesuada turpis. Pellentesque ut fermentum nisi. Pellentesque vel dolor consequat, vulputate orci
-                    sagittis, fringilla urna. Sed dui ante, lobortis nec ante a, sodales aliquam orci. Sed aliquet
-                    eleifend convallis. Donec nec elementum felis. Quisque suscipit ipsum at consectetur vehicula.
+                <p>
+                    Hi there! Thank you for visiting this site. If you want to send me a job offer
+                    or just to say Hi, please feel free to fill the content form below.
                 </p>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                    <span id="name-error"></span>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <span id="email-error"></span>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                    <span id="message-error"></span>
+                    <button id="submit-btn">Submit</button>
+                </form>
             </div>
         </section>
 

@@ -76,6 +76,12 @@ body section {
     gap: 20px;
 }
 
+.project-details-btn {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--body-font-color);
+}
+
 .project {
     flex: 1 1 30%;
 }
@@ -93,12 +99,44 @@ body section {
     display: none;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 5px;
+    font-size: var(--font-size-small);
+    font-family: var(--font-family);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid var(--body-font-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fafdff;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    color: var(--body-font-color);
+    font-size: var(--font-size-small);
+}
+
+.contact-container button {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--body-font-color);
+}
+
 .contact-header {
     width: 100%;
 }
 
 .contact-container p {
     font-size: var(--font-size-small);
+    margin-bottom: 30px;
 }
 
 .footer {
