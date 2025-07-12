@@ -32,7 +32,13 @@ submitButton.addEventListener("click", function (e) {
     const form = document.getElementById("contact-form");
     if (isFormValid) {
         form.classList.add("hidden");
-        
+
+        //TODO: API call should be made here
+
+        var typed = new Typed('#greeting', {
+            strings: ["Thank you for your message! I look forward to connecting with you!"],
+            typeSpeed: 25,
+        });
     }
 });
 
