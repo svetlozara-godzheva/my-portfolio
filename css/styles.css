@@ -76,6 +76,10 @@ body section {
     gap: 20px;
 }
 
+.project {
+    flex: 1 1 30%;
+}
+
 .project h3 {
     margin: 0px;
 }
