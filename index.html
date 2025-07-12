@@ -91,21 +91,28 @@
             </div>
             <div class="contact-container">
                 <p>
-                    Hi there! Thank you for visiting this site. If you want to send me a job offer
+                    Hi there! Thank you for visiting this site! If you want to send me a job offer
                     or just to say Hi, please feel free to fill the content form below.
                 </p>
-                <form action="#" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name">
-                    <span id="name-error"></span>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
-                    <span id="email-error"></span>
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message"></textarea>
-                    <span id="message-error"></span>
+                <form action="#" method="post" id="contact-form">
+                    <div class="form-field">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                        <span class="error" id="email-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message"></textarea>
+                        <span class="error" id="message-error"></span>
+                    </div>
                     <button id="submit-btn">Submit</button>
                 </form>
+                <p id="greeting"></p>
             </div>
         </section>
 

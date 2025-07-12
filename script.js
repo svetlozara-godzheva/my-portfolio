@@ -23,12 +23,20 @@ projectDetailsButtons.forEach(button => {
 
 const submitButton = document.getElementById("submit-btn");
 submitButton.addEventListener("click", function (e) {
-    checkName(e);
-    checkEmail(e);
-    checkMessage(e);
+    let isFormValid = true;
+    isFormValid = isNameValid(e) && isFormValid;
+    isFormValid = isEmailValid(e) && isFormValid;
+    isFormValid = isMessageValid(e) && isFormValid;
+    e.preventDefault();
+
+    const form = document.getElementById("contact-form");
+    if (isFormValid) {
+        form.classList.add("hidden");
+        
+    }
 });
 
-function checkName(e) {
+function isNameValid(e) {
     const nameInput = document.getElementById("name");
     /**
    * @type {string} 
@@ -38,14 +46,15 @@ function checkName(e) {
     const messageElement = document.getElementById("name-error");
 
     if (nameValue.trim() === "") {
-        messageElement.innerHTML = "You should enter your name"
-        e.preventDefault();
+        messageElement.innerHTML = "You should enter your name."
+        return false;
     } else {
         messageElement.innerHTML = "";
     }
+    return true;
 }
 
-function checkEmail(e) {
+function isEmailValid(e) {
     const emailInput = document.getElementById("email");
     /**
    * @type {string} 
@@ -55,14 +64,15 @@ function checkEmail(e) {
     const messageElement = document.getElementById("email-error");
 
     if (emailValue.trim() === "") {
-        messageElement.innerHTML = "You should enter an email"
-        e.preventDefault();
+        messageElement.innerHTML = "You should enter an email."
+        return false;
     } else {
         messageElement.innerHTML = "";
     }
+    return true;
 }
 
-function checkMessage(e) {
+function isMessageValid(e) {
     const messageInput = document.getElementById("message");
     /**
    * @type {string} 
@@ -73,9 +83,10 @@ function checkMessage(e) {
 
     if (messageValue.trim() === "") {
         messageElement.innerHTML = "You should enter a message";
-        e.preventDefault();
+        return false;
     } else {
         messageElement.innerHTML = "";
     }
+    return true;
 }
 
